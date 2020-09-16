@@ -11,13 +11,13 @@
 		<tr>
 			<td>Id</td>
 			<td>Nome</td>
-			<td>Nota</td>
+			<td>Titulação</td>
 		</tr>
-		<% for(let i=0; i<notas.length; i++) {%>
+		<% for(let i=0; i<professores.length; i++) {%>
 		<tr>
-			<td><%= notas[i].idestudante %></td>
-			<td><%= notas[i].nome %></td>
-			<td><%= notas[i].nota %></td>
+			<td><%= professores[i].idprofessores %></td>
+			<td><%= professores[i].nome %></td>
+			<td><%= professores[i].titulacao %></td>
 		</tr>
 		<% } %>
 	</table>

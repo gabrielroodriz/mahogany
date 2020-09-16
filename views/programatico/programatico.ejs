@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conteúdo Programático</title>
+</head>
+<body>
+    <h1>Conteúdo Programático</h1>
+    <table>
+		<tr>
+			<td>Data</td>
+			<td>Conteúdo Planejado</td>
+			<td>Metodologia de Estino e Recursos</td>
+		</tr>
+		<% for(let i=0; i<programatico.length; i++) {%>
+		<tr>
+			<td><%= programatico[i].data %></td>
+			<td><%= programatico[i].titulo %></td>
+			<td><%= programatico[i].conteudo %></td>
+		</tr>
+		<% } %>
+	</table>
+</body>
+</html>
