@@ -1,31 +1,13 @@
-const connection = require('./config/dbConnection');
 const app = require('./config/server');
+const connection = require('./config/dbConnection');
+const routeHome = require('./app/routes/home');
+const routeNotas = require('./app/routes/notas');
+const routeProfessor = require('./app/routes/professor');
+const routeProgramatico = require('./app/routes/programatico');
+const routeAdmin = require('./app/routes/admin');
 
-app.get('/', (req, res) => {
-  res.render('home/home');
-});
-
-app.get('/notas', (req, res) => {
-  const sql = 'SELECT * FROM estudantes';
-  connection.query(sql, function (error, result) {
-    res.render('notas/notas', { notas: result });
-  });
-});
-
-app.get('/professores', (req, res) => {
-  const sql = 'SELECT * FROM professores';
-  connection.query(sql, function (error, result) {
-    res.render('professores/professores', { professores: result });
-  });
-});
-
-app.get('/programatico', (req, res) => {
-  const sql = 'SELECT * FROM programatico';
-  connection.query(sql, function (error, result) {
-    res.render('programatico/programatico', { programatico: result });
-  });
-});
-
-app.get('/admin', (req, res) => {
-  res.render('admin/admin');
-});
+routeHome(app);
+routeNotas(app);
+routeProfessor(app);
+routeProgramatico(app);
+routeAdmin(app);
