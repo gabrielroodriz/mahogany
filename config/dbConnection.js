@@ -1,10 +1,12 @@
 const mysql = require('mysql');
 
-const connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'xin',
-  password: 'xin',
-  database: 'dsw',
-});
+const connection = () => {
+  return mysql.createConnection({
+    host: 'localhost',
+    user: 'gabriel',
+    password: '32266446a',
+    database: 'dws',
+  });
+};
 
 module.exports = connection;
